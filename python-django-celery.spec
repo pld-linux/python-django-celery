@@ -3,10 +3,10 @@
 %bcond_without	tests	# do not perform "make test"
 
 %define 	module	django-celery
-Summary:	-
+Summary:	django-celery provides Celery intergration for Django
 Name:		python-%module
 Version:	2.2.4
-Release:	0.1
+Release:	0.9
 License:	BSD
 Group:		Development/Languages
 URL:		http://code.google.com/p/%{module}/
@@ -26,14 +26,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-When you run ./manage.py syncdb, Django will look for any new models
-that have been defined, and add a database table to represent those
-new models. However, if you make a change to an existing model,
-./manage.py syncdb will not make any changes to the database.
+Provides Celery integration for Django; Using Django ORM and cache backend for
+storing results, autodiscovery of task modules for applications listed in 
+INSTALLED_APPS, and more.
 
-This is where Django Evolution fits in. Django Evolution is an
-extension to Django that allows you to track changes in your models
-over time, and to update the database to reflect those changes.
 
 %prep
 %setup -q -n %{module}-%{version}
@@ -61,7 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS LICENSE README docs
-%{py_sitescriptdir}/%{module}
+%attr(755,root,root)%{_bindir}/djcelerymon
+%{py_sitescriptdir}/djcelery
 %if "%{py_ver}" > "2.4"
-%{py_sitescriptdir}/%{module}-%{version}-*.egg-info
+%{py_sitescriptdir}/django_celery-%{version}-*.egg-info/
 %endif
