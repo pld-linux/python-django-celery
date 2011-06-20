@@ -22,6 +22,7 @@ BuildRequires:	python-django
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sed >= 4.0
 Requires:	python-django
+Requires:	python-django-picklefield
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
