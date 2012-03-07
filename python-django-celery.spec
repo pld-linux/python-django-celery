@@ -5,20 +5,20 @@
 %define 	module	django-celery
 Summary:	django-celery provides Celery intergration for Django
 Name:		python-%module
-Version:	2.4.2
+Version:	2.5.1
 Release:	0.9
 License:	BSD
 Group:		Development/Languages
 URL:		http://code.google.com/p/%{module}/
 Source0:	http://pypi.python.org/packages/source/d/%{module}/%{module}-%{version}.tar.gz
-# Source0-md5:	ac2e18cf0738b966d5bece53218e6423
+# Source0-md5:	4cfaa8e1ae3741ecd85a9cfe4af5e4dc
 BuildRequires:	python-modules
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sed >= 4.0
 Requires:	python-django
-Requires:	python-celery >= 2.4.2
+Requires:	python-celery >= %{version}
 Requires:	python-django-picklefield
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
