@@ -9,16 +9,16 @@ Version:	2.5.1
 Release:	0.9
 License:	BSD
 Group:		Development/Languages
-URL:		http://code.google.com/p/%{module}/
 Source0:	http://pypi.python.org/packages/source/d/%{module}/%{module}-%{version}.tar.gz
 # Source0-md5:	4cfaa8e1ae3741ecd85a9cfe4af5e4dc
+URL:		http://code.google.com/p/django-celery/
 BuildRequires:	python-modules
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sed >= 4.0
-Requires:	python-django
 Requires:	python-celery >= %{version}
+Requires:	python-django
 Requires:	python-django-picklefield
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -55,5 +55,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root)%{_bindir}/djcelerymon
 %{py_sitescriptdir}/djcelery
 %if "%{py_ver}" > "2.4"
-%{py_sitescriptdir}/django_celery-%{version}-*.egg-info/
+%{py_sitescriptdir}/django_celery-%{version}-*.egg-info
 %endif
