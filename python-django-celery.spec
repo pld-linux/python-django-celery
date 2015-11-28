@@ -32,13 +32,11 @@ applications listed in INSTALLED_APPS, and more.
 %setup -q -n %{module}-%{version}
 
 %build
-%{__python} setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install \
-	--optimize=2 \
-	--skip-build \
+%py_install \
 	--root $RPM_BUILD_ROOT
 
 %py_postclean
