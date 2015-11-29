@@ -15,7 +15,7 @@ URL:		http://code.google.com/p/django-celery/
 BuildRequires:	python-modules
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	sed >= 4.0
 Requires:	python-celery >= %{version}
 Requires:	python-django
