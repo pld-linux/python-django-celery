@@ -1,0 +1,11 @@
+--- django-celery-3.3.1/setup.py.orig	2019-08-14 06:08:29.000000000 +0200
++++ django-celery-3.3.1/setup.py	2023-12-11 22:09:55.118228568 +0100
+@@ -181,7 +181,7 @@ setup(
+     package_data=package_data,
+     zip_safe=False,
+     install_requires=[
+-        'celery>=3.1.15,<4.0',
++        'celery>=3.1.15',
+         'django>=1.8',
+     ],
+     cmdclass={'test': RunTests,
