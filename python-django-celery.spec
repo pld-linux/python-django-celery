@@ -44,6 +44,7 @@ BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 BuildRequires:	sed >= 4.0
 %if %{with doc}
+BuildRequires:	python-celery
 BuildRequires:	python-django >= 1.8
 BuildRequires:	python-sphinxcontrib-issuetracker
 BuildRequires:	sphinx-pdg-2
