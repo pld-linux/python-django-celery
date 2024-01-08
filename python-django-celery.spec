@@ -95,7 +95,7 @@ Dokumentacja API modułu Pythona django-celery.
 %patch0 -p1
 
 # avoid network usage via sphinxcontrib-issuetracker during docs build
-%{__sed} -i -e 's/Issue #\([0-9]\+\)/Issue ``#\1``/' docs/changelog.rst
+%{__sed} -i -e 's/Issue #\([0-9]\+\)/Issue ``#\1``/g' docs/changelog.rst
 
 %build
 %if %{with python2}
