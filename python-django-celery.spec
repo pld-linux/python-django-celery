@@ -94,6 +94,9 @@ Dokumentacja API modułu Pythona django-celery.
 %setup -q -n %{module}-%{version}
 %patch0 -p1
 
+# avoid network usage via sphinxcontrib-issuetracker during docs build
+%{__sed} -i -e 's/Issue #\([0-9]\+\)/Issue ``#\1``/' docs/changelog.rst
+
 %build
 %if %{with python2}
 %py_build %{?with_tests:test}
