@@ -92,7 +92,7 @@ Dokumentacja API modułu Pythona django-celery.
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch0 -p1
+%patch -P 0 -p1
 
 # avoid network usage via sphinxcontrib-issuetracker during docs build
 %{__sed} -i -e 's/Issue #\([0-9]\+\)/Issue ``#\1``/g' docs/changelog.rst
