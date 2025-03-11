@@ -10,7 +10,7 @@ Summary:	Celery integration for Django
 Summary(pl.UTF-8):	Integracja Celery z Django
 Name:		python-%{module}
 Version:	3.3.1
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	https://files.pythonhosted.org/packages/source/d/django-celery/%{module}-%{version}.tar.gz
